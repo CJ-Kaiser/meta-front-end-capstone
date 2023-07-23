@@ -1,0 +1,64 @@
+
+.ft-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.ft-logo img {
+    width: 100%;
+    max-width: max-content;
+}
+
+@media not (max-width: 600px) {
+    footer {
+        grid-column: 1 / span 12;
+        grid-row: 3/span 1;
+
+        grid-template-rows: auto;
+    }
+
+    .ft-logo {
+        grid-column: 3/span 2;
+    }
+
+    .ft-doormat {
+        grid-column: 5/span 2;
+    }
+
+    .ft-contact {
+        grid-column: 7/span 2;
+    }
+
+    .ft-social {
+        grid-column: 9/span 2;
+    }
+}
+
+@media (max-width: 600px) {
+    footer {
+        grid-row: 4/span 1;
+
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: auto;
+    }
+
+    .ft-logo {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .ft-doormat {
+        grid-column: 1;
+        grid-row:2
+    }
+
+    .ft-contact {
+        grid-column: 1;
+        grid-row:3
+    }
+
+    .ft-social {
+        grid-column: 1;
+        grid-row:4
+    }
+}

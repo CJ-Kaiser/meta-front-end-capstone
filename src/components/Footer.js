@@ -1,24 +1,24 @@
-
+import './styles/Footer.css'
 import logo from '../images/logo.svg';
 
 function Footer() {
     return(
-        <footer>
-            <div>
+        <footer class="lg-grid12col">
+            <div class="ft-logo">
                 <img src={logo}/>
             </div>
-            <div>
+            <div class="ft-doormat">
                 <p>Doormat Navigation</p>
                 <ul>
-                    <li><a>Home</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Menu</a></li>
-                    <li><a>Reservations</a></li>
-                    <li><a>Order Online</a></li>
-                    <li><a>Login</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Reservations</a></li>
+                    <li><a href="#">Order Online</a></li>
+                    <li><a href="#">Login</a></li>
                 </ul>
             </div>
-            <div>
+            <div class="ft-contact">
                 <p>Contact</p>
                 <ul>
                     <li>Address</li>
@@ -26,7 +26,7 @@ function Footer() {
                     <li>Email</li>
                 </ul>
             </div>
-            <div>
+            <div class="ft-social">
                 <p>Social Media Links</p>
                 <ul>
                     <li>Facebook</li>
