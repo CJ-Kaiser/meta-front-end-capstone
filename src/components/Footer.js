@@ -3,11 +3,11 @@ import logo from '../images/logo.svg';
 
 function Footer() {
     return(
-        <footer class="lg-grid12col">
-            <div class="ft-logo">
+        <footer className="lg-grid12col">
+            <div className="ft-logo">
                 <img src={logo}/>
             </div>
-            <div class="ft-doormat">
+            <div className="ft-doormat">
                 <p>Doormat Navigation</p>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -18,7 +18,7 @@ function Footer() {
                     <li><a href="#">Login</a></li>
                 </ul>
             </div>
-            <div class="ft-contact">
+            <div className="ft-contact">
                 <p>Contact</p>
                 <ul>
                     <li>Address</li>
@@ -26,7 +26,7 @@ function Footer() {
                     <li>Email</li>
                 </ul>
             </div>
-            <div class="ft-social">
+            <div className="ft-social">
                 <p>Social Media Links</p>
                 <ul>
                     <li>Facebook</li>

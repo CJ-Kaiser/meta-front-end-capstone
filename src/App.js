@@ -7,7 +7,7 @@ import logo from './images/logo.svg';
 
 function App() {
   return (
-    <div class="app lg-grid12col sm-grid1col">
+    <div className="app lg-grid12col sm-grid1col">
       <Header/>
       <Nav/>
       <Main/>
