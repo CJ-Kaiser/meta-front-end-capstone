@@ -9,48 +9,72 @@ h1 {
 }
 
 h1.displayTitle {
-  font-size: 64pt;
+  font-size: 64px;
   font-weight:500;
 }
 
 h1.subtitle {
-  font-size: 40pt;
+  font-size: 40px;
   font-weight:400;
 }
 
 h1.sectionTitle {
-  font-size: 20pt;
+  font-size: 20px;
   font-weight: 800;
   text-transform: uppercase;
 }
 
 h1.cardTitle {
-  font-size: 18pt;
+  font-size: 18px;
   font-weight: bold;
 }
 
-p, span, h1.cardTitle {
+p, span, h1.cardTitle, button {
   font-family: 'Karla', sans-serif;
 }
 
 p.sectionCategory {
-  font-size: 16pt;
+  font-size: 16px;
   font-weight:800;
 }
 
+p.heroText {
+  font-size: 20px;
+  font-weight: 500;
+}
+
 p.leadText {
-  font-size: 18pt;
+  font-size: 18px;
   font-weight: 500;
 }
 
 p.paragraphText {
-  font-size: 16pt;
+  font-size: 16px;
   font-weight: 400;
 }
 
 p.highlightText {
-  font-size: 16pt;
+  font-size: 16px;
   font-weight: 500;
+}
+
+.imgContainer {
+  display:flex;
+  justify-content: center;
+}
+
+.imgFill {
+  width: 100%;
+}
+
+button {
+  background-color: #F4CE14;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 16px;
+  width:200px;
+  height:60px;
 }
 
 @media not (max-width: 600px) {

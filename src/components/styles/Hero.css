@@ -1,8 +1,22 @@
 
 .hero {
-    background-color: #6F6E6E;
     grid-column: 1/span 12;
     grid-row: 1/span 1;
+
+    height: 465px;
+    color: #FFFFFF;
+}
+
+.hero-bg {
+    background-color: #6F6E6E;
+    height: 405px;
+    width:100%;
+    position:absolute;
+    z-index: -1;
+}
+
+.hero .displayTitle {
+    color: #F4CE14;
 }
 
 .heroInner {
@@ -20,11 +34,13 @@
     grid-column: 2/span 1;
     grid-row: 1/span 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    flex-direction: column;
 }
 
 .heroImgContainer img{
     width: 350px;
-    max-width: max-content;
+    height: 400px;
+    object-fit: cover;
     border-radius: 16px;
 }

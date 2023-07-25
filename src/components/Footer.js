@@ -4,8 +4,8 @@ import logo from '../images/logo.svg';
 function Footer() {
     return(
         <footer className="lg-grid12col">
-            <div className="ft-logo">
-                <img src={logo}/>
+            <div className="ft-logo imgContainer">
+                <img src={logo} className="imgFill"/>
             </div>
             <div className="ft-doormat">
                 <p>Doormat Navigation</p>

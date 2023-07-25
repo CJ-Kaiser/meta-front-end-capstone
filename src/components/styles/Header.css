@@ -1,14 +1,4 @@
 
-header{
-  display: flex;
-  justify-content: center;
-}
-
-header img {
-  width: 100%;
-  max-width: max-content;
-}
-
 @media not (max-width: 600px) {
   header {
     grid-column: 3 / span 2;

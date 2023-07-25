@@ -1,13 +1,4 @@
 
-.ft-logo {
-    display: flex;
-    justify-content: center;
-}
-
-.ft-logo img {
-    width: 100%;
-    max-width: max-content;
-}
 
 @media not (max-width: 600px) {
     footer {

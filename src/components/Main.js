@@ -5,9 +5,7 @@ function Main() {
     return(
         <main className="lg-grid12col sm-grid1col">
             <Hero/>
-            <section className="highlights middle8columns">
-                Highlights
-            </section>
+            
             <section className="testimonials middle8columns">
                 Testimonials
             </section>
