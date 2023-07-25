@@ -1,12 +1,10 @@
 import './styles/Main.css';
+import Hero from './Hero.js';
 
 function Main() {
     return(
         <main className="lg-grid12col sm-grid1col">
-            <section className="hero middle8columns">
-                <h1 className="displayTitle">Little Lemon</h1>
-                <h1 className="subtitle">Chicago</h1>
-            </section>
+            <Hero/>
             <section className="highlights middle8columns">
                 Highlights
             </section>
