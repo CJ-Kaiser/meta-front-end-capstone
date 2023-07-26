@@ -3,7 +3,7 @@ import './styles/Nav.css'
 function Nav() {
     return(
         <nav>
-            <ul>
+            <ul className="navList">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Menu</a></li>

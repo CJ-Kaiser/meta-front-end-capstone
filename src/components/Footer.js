@@ -5,11 +5,11 @@ function Footer() {
     return(
         <footer className="lg-grid12col">
             <div className="ft-logo imgContainer">
-                <img src={logo} className="imgFill"/>
+                <img src={logo} className="logoImg"/>
             </div>
             <div className="ft-doormat">
-                <p>Doormat Navigation</p>
-                <ul>
+                <p className="sectionCategory">Doormat Navigation</p>
+                <ul className="navList">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Menu</a></li>
@@ -19,16 +19,16 @@ function Footer() {
                 </ul>
             </div>
             <div className="ft-contact">
-                <p>Contact</p>
-                <ul>
+                <p className="sectionCategory">Contact</p>
+                <ul className="navList">
                     <li>Address</li>
                     <li>Phone Number</li>
                     <li>Email</li>
                 </ul>
             </div>
             <div className="ft-social">
-                <p>Social Media Links</p>
-                <ul>
+                <p className="sectionCategory">Social Media Links</p>
+                <ul className="navList">
                     <li>Facebook</li>
                     <li>Twitter</li>
                     <li>Instagram</li>

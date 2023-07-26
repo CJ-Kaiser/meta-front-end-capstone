@@ -2,6 +2,7 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Karla', sans-serif;
 }
 
 h1 {
@@ -38,10 +39,6 @@ p.sectionCategory {
   font-weight:800;
 }
 
-p.heroText {
-  font-size: 20px;
-  font-weight: 500;
-}
 
 p.leadText {
   font-size: 18px;
@@ -63,8 +60,10 @@ p.highlightText {
   justify-content: center;
 }
 
-.imgFill {
+.logoImg {
   width: 100%;
+  max-width: 180px;
+  min-width: 120px;
 }
 
 button {
@@ -77,19 +76,33 @@ button {
   height:60px;
 }
 
-@media not (max-width: 600px) {
+.navList ul {
+  list-style-type: none;
+  white-space: nowrap;
+}
+
+.navList li {
+  display:inline-block;  
+}
+
+.navList a {
+  text-decoration: none;
+  color: black;
+}
+
+@media not (max-width: 840px) {
   .app {
     grid-template-rows: repeat(3, auto);
   }
 
   .lg-grid12col {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(2, 0.5fr) repeat(8, 1fr) repeat(2,0.5fr);
     column-gap: 20px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 840px) {
   .app {
     grid-template-rows: repeat(4, auto);
   }
