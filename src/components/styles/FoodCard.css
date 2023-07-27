@@ -1,0 +1,46 @@
+
+.foodCard {
+    width: 265px;
+    height: 440px;
+    background-color: beige;
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.cardImage {
+    width:100%;
+    height:42%;
+    object-fit: cover;
+}
+
+.cardContent {
+    flex: 1 1 auto;
+
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardFooter {
+    display: flex;
+    gap: 16px;
+}
+
+.cardIcon {
+    width: 16px;
+    object-fit: contain;
+}
+
+.foodCard .highlightText {
+    font-weight: bold;
+    color: #EE9972;
+}

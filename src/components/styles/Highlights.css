@@ -1,0 +1,17 @@
+.highlights {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    grid-row: 2/span 1;
+}
+
+.cardHolder {
+    margin-top: 32px;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.highlightsHeader {
+    display:flex;
+    justify-content: space-between;
+}

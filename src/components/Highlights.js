@@ -1,3 +1,5 @@
+import './styles/Highlights.css';
+
 import bruschetta from '../images/bruschetta.png';
 import greekSalad from '../images/greekSalad.jpg';
 import lemonDessert from '../images/lemonDessert.jpg';
@@ -27,14 +29,20 @@ const cardData = [
 function Highlights() {
     return (
         <section className="highlights middle8columns">
-            {cardData.map((data) => (
-                <FoodCard 
-                    name={data.name}
-                    price={data.price}
-                    description={data.description}
-                    image={data.image}
-                />
-            ))}
+            <div className="highlightsHeader">
+                <h1 className="displayTitle">This Week's Specials!</h1>
+                <button>Order Online</button>
+            </div>
+            <div className="cardHolder">
+                {cardData.map((data) => (
+                    <FoodCard 
+                        name={data.name}
+                        price={data.price}
+                        description={data.description}
+                        image={data.image}
+                    />
+                ))}
+            </div>
         </section>
     );
 }
