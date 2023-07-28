@@ -1,15 +1,14 @@
 import './styles/Main.css';
 import Hero from './Hero.js';
 import Highlights from './Highlights.js';
+import Testimonials from './Testimonials.js';
 
 function Main() {
     return(
         <main className="lg-grid12col sm-grid1col">
             <Hero/>
             <Highlights/>
-            <section className="testimonials middle8columns">
-                Testimonials
-            </section>
+            <Testimonials/>
             <section className="about middle8columns">
                 About
             </section>
@@ -18,3 +17,5 @@ function Main() {
 }
 
 export default Main;
+
+

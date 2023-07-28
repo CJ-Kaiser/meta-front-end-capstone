@@ -1,0 +1,26 @@
+
+.testimonialCard {
+    width: 200px;
+    height: 175px;
+    padding: 16px;
+    background-color: cornflowerblue;
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    justify-content: center;
+}
+
+.testimonialCard .stars {
+    
+}
+
+.testimonialBio {
+    display: flex;
+    align-items: center;
+}
+
+.testimonialBio img {
+    width: 64px;
+}
