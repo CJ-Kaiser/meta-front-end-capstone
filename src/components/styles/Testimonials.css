@@ -1,0 +1,19 @@
+.testimonials {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 32px 0;
+
+    grid-column: 1/span 12;
+    grid-row: 3/span 1;
+    background-color: #6F6E6E;
+}
+
+.testimonials h1 {
+    text-align: center;
+}
+
+.testimonialContainer {
+    display:flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}

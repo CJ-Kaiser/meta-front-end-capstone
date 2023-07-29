@@ -1,14 +1,13 @@
 import './styles/TestimonialCard.css';
 
 import Stars from './Stars';
-import test from '../images/iconDelivery.png';
 
-function TestimonialCard({ rating, customer, reviewText }) {
+function TestimonialCard({ rating, customer, imageSrc, reviewText }) {
     return (
         <article className="testimonialCard">
             <Stars rating={rating}/>
             <div className="testimonialBio">
-                <img src={test}/>
+                <img src={imageSrc}/>
                 <p className="sectionCategory">{customer}</p>
             </div>
             <p className="paragraphText">{reviewText}</p>

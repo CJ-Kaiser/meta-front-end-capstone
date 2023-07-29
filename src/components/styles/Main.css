@@ -1,12 +1,5 @@
 
 
-
-
-.testimonials {
-    background-color:beige;
-    grid-row: 3/span 1;
-}
-
 .about {
     background-color:chocolate;
     grid-row: 4/span 1;

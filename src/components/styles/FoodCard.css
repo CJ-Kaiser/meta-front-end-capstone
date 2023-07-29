@@ -2,7 +2,7 @@
 .foodCard {
     width: 265px;
     height: 440px;
-    background-color: beige;
+    background-color: #FBDABB;
     border-radius: 16px 16px 0 0;
     overflow: hidden;
 
@@ -42,5 +42,5 @@
 
 .foodCard .highlightText {
     font-weight: bold;
-    color: #EE9972;
+    /*color: #EE9972;*/
 }
