@@ -1,14 +1,14 @@
 import './styles/Footer.css'
-import logo from '../images/logo.svg';
+import logo2 from '../images/logo2.png';
 
 function Footer() {
     return(
         <footer className="lg-grid12col">
             <div className="ft-logo imgContainer">
-                <img src={logo} className="logoImg"/>
+                <img src={logo2} className="logoImg"/>
             </div>
             <div className="ft-doormat">
-                <p className="sectionCategory">Doormat Navigation</p>
+                <h1 className="cardTitle">Doormat Navigation</h1>
                 <ul className="navList">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -19,7 +19,7 @@ function Footer() {
                 </ul>
             </div>
             <div className="ft-contact">
-                <p className="sectionCategory">Contact</p>
+                <h1 className="cardTitle">Contact</h1>
                 <ul className="navList">
                     <li>Address</li>
                     <li>Phone Number</li>
@@ -27,11 +27,11 @@ function Footer() {
                 </ul>
             </div>
             <div className="ft-social">
-                <p className="sectionCategory">Social Media Links</p>
+                <h1 className="cardTitle">Social Media Links</h1>
                 <ul className="navList">
-                    <li>Facebook</li>
-                    <li>Twitter</li>
-                    <li>Instagram</li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
                 </ul>
             </div>
         </footer>
