@@ -1,0 +1,54 @@
+.about {
+    grid-row: 4/span 1;
+
+    height: 470px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about .displayTitle {
+    /*color: #F4CE14;*/
+    margin-top: 30px;
+    width: 290px;
+}
+
+.about .subtitle {
+    margin-top:-16px;
+    margin-bottom:12px;
+}
+
+.about p {
+    font-size: 20px;
+    font-weight: 500;
+    width: 370px;
+}
+
+.aboutLeft {
+    columns: 1/1;
+}
+
+.aboutRight {
+    columns: 2/1;
+    position: relative;
+}
+
+.about img {
+    width: 270px;
+    height: 340px;
+    object-fit: cover;
+    position: absolute;
+    box-shadow: 0px 1px 5px gray;
+    border-radius: 4px;
+}
+
+.oneChef {
+    top: 20%;
+    left: 0;
+    object-position: 60% 50%;
+}
+
+.twoChefs {
+    top: 5%;
+    left: 40%;
+    object-position: 70% 50%;
+}

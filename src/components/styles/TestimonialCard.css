@@ -1,14 +1,15 @@
 
 .testimonialCard {
-    width: 200px;
-    height: 175px;
+    aspect-ratio: 200 / 175;
+    max-width: 200px;
+
     padding: 16px;
     background-color: #FBDABB;
 
     display: inline-flex;
     flex-direction: column;
     row-gap: 16px;
-    justify-content: center;
+    justify-content: top;
 
     border-radius: 8px;
 }

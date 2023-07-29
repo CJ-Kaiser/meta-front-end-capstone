@@ -1,10 +1,4 @@
 
-
-.about {
-    background-color:chocolate;
-    grid-row: 4/span 1;
-}
-
 @media not (max-width: 600px) {
     main {
         grid-template-rows: repeat(4, auto);

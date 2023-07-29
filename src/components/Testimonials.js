@@ -18,7 +18,7 @@ const testimonialData = [
         rating: 5,
         customer: 'Nikos',
         imageSrc: 'https://i.pravatar.cc/150?img=68',
-        text: "The food reminds me of home.",
+        text: "I come here often. The food reminds me of home.",
     },
     {
         rating: 5,
