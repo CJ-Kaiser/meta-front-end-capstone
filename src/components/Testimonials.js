@@ -6,7 +6,7 @@ const testimonialData = [
         rating: 5,
         customer: 'Dara',
         imageSrc: 'https://i.pravatar.cc/150?img=5',
-        text: "You HAVE to try the cake! Excellent service.",
+        text: "Mario and Adrian are top class chefs.",
     },
     {
         rating: 4,
@@ -24,7 +24,7 @@ const testimonialData = [
         rating: 5,
         customer: 'Maria',
         imageSrc: 'https://i.pravatar.cc/150?img=10',
-        text: "Mario and Adrian are top class chefs!",
+        text: "You HAVE to try the cake! Excellent service.",
     },
 ]
 
