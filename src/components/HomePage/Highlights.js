@@ -1,8 +1,8 @@
 import './styles/Highlights.css';
 
-import bruschetta from '../images/bruschetta.png';
-import greekSalad from '../images/greekSalad.jpg';
-import lemonDessert from '../images/lemonDessert.jpg';
+import bruschetta from '../../images/bruschetta.png';
+import greekSalad from '../../images/greekSalad.jpg';
+import lemonDessert from '../../images/lemonDessert.jpg';
 import FoodCard from './FoodCard.js';
 
 const cardData = [

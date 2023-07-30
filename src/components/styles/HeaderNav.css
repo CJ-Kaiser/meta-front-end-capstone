@@ -1,9 +1,9 @@
 
-nav {
+.headerNav {
     height: 120px;
 }
 
-nav ul{
+.headerNav ul{
     height: 100%;
     display: flex;
     font-weight: bold;
@@ -12,14 +12,14 @@ nav ul{
 }
 
 @media not (max-width: 840px) {
-    nav {
+    .headerNav {
         grid-column: 5 / 11;
         grid-row: 1/ span 1;
     }
 }
 
 @media (max-width: 840px) {
-    nav {
+    .headerNav {
         grid-row: 2/ span 1;
     }
 }

@@ -1,5 +1,5 @@
 import './styles/Hero.css';
-import food from '../images/restaurantfood.jpg';
+import food from '../../images/restaurantfood.jpg';
 
 function Hero() {
     return (

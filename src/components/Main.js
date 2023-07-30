@@ -1,20 +1,18 @@
 import './styles/Main.css';
-import Hero from './Hero.js';
-import Highlights from './Highlights.js';
-import Testimonials from './Testimonials.js';
-import About from './About';
+
+import HomePage from './HomePage/HomePage.js';
+import BookingPage from './BookingPage/BookingPage.js';
+import {Routes, Route} from "react-router-dom";
 
 function Main() {
-    return(
-        <main className='lg-grid12col sm-grid1col'>
-            <Hero/>
-            <Highlights/>
-            <Testimonials/>
-            <About/>
-        </main>
-    );
+  return (
+    <main>
+      <Routes>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/booking" element={<BookingPage />}></Route>
+      </Routes>
+    </main>
+  );
 }
 
 export default Main;
-
-

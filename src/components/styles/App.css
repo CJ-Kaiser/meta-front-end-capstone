@@ -83,7 +83,7 @@ button {
 }
 
 .navList li {
-  display:inline-block;  
+  display:inline-block;
 }
 
 .navList a {
@@ -98,9 +98,13 @@ button {
 
   .lg-grid12col {
     display: grid;
-    grid-template-columns: repeat(2, 0.5fr) repeat(8, 1fr) repeat(2,0.5fr);
+    grid-template-columns: repeat(2, 0.75fr) repeat(8, 1fr) repeat(2,0.75fr);
     column-gap: 20px;
   }
+
+  .middle8columns {
+    grid-column: 3/span 8;
+}
 }
 
 @media (max-width: 840px) {

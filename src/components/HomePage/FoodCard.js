@@ -1,5 +1,5 @@
 import './styles/FoodCard.css';
-import iconDelivery from '../images/iconDelivery.png';
+import iconDelivery from '../../images/iconDelivery.png';
 
 function FoodCard({name, price, description, image}) {
     return (

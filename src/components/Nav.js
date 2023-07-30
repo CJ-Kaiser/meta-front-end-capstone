@@ -1,15 +1,13 @@
-import './styles/Nav.css'
+import { Link } from 'react-router-dom';
 
-function Nav() {
+function Nav({links, style=""}) {
     return(
-        <nav>
-            <ul className="navList">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Reservations</a></li>
-                <li><a href="#">Order Online</a></li>
-                <li><a href="#">Login</a></li>
+        <nav className={style}>
+            <ul className='navList'>
+                {links.map((data) => (
+                    data.anchor === true ? <li><a href={data.path}>{data.text}</a></li>
+                                : <li><Link to={data.path}>{data.text}</Link></li>
+                ))}
             </ul>
         </nav>
     );

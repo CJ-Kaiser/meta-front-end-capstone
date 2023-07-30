@@ -1,6 +1,6 @@
 import './styles/TestimonialCard.css';
 
-import Stars from './Stars';
+import Stars from '../Stars';
 
 function TestimonialCard({ rating, customer, imageSrc, reviewText }) {
     return (

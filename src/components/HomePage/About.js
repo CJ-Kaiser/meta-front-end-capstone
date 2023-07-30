@@ -1,6 +1,6 @@
 import './styles/About.css';
-import twoChefs from '../images/marioAdrian.jpg';
-import oneChef from '../images/chefB.jpg';
+import twoChefs from '../../images/marioAdrian.jpg';
+import oneChef from '../../images/chefB.jpg';
 
 function About() {
     return (
