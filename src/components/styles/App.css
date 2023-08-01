@@ -98,7 +98,7 @@ button {
 
   .lg-grid12col {
     display: grid;
-    grid-template-columns: repeat(2, 0.75fr) repeat(8, 1fr) repeat(2,0.75fr);
+    grid-template-columns: repeat(2, 0.5fr) repeat(8, 1fr) repeat(2,0.5fr);
     column-gap: 20px;
   }
 
