@@ -36,6 +36,7 @@ function Highlights() {
             <div className="cardHolder">
                 {cardData.map((data) => (
                     <FoodCard 
+                        key={data.name}
                         name={data.name}
                         price={data.price}
                         description={data.description}

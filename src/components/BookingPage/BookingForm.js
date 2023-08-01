@@ -1,24 +1,38 @@
 
 import {useState} from 'react';
 
-function BookingForm(props) {
+function BookingForm({timesState}) {
 
-    const [form, setForm] = useState({
+    const [availableTimes, timesDispatch] = timesState;
+
+    const [formInputs, setFormInputs] = useState({
+        date: Date.now.toString(),
         time: '17:00',
         people: 1,
         occasion: "None"
     });
 
-    const availableTimes = props.times;
-    
+    function dateChanged(e) {
+        setFormInputs({...formInputs, date: e.target.value});
+        timesDispatch({
+            type: 'changed-date',
+            date: e.target.value,
+        });
+    };
+
     return (
         <form>
             <label htmlFor="res-date">Choose date</label>
-            <input type="date" id="res-date"/>
+            <input
+                type="date"
+                id="res-date"
+                value={formInputs.date}
+                onChange={e=>dateChanged(e)}
+            />
             <label htmlFor="res-time">Choose time</label>
             <select id="res-time "
-                value={form.time}
-                onChange={e=> setForm({...form, time: e.target.value})}
+                value={formInputs.time}
+                onChange={e=> setFormInputs({...formInputs, time: e.target.value})}
             >
                 {availableTimes.map(time => (
                     <option>{time}</option>
@@ -31,14 +45,14 @@ function BookingForm(props) {
                 min="1" 
                 max="10"
                 id="guests"
-                value={form.people}
-                onChange={e => setForm({...form, people: e.target.value})}
+                value={formInputs.people}
+                onChange={e => setFormInputs({...formInputs, people: e.target.value})}
             />
             <label htmlFor="occasion">Occasion</label>
             <select
                 id="occasion"
-                value={form.occasion}
-                onChange={e => setForm({...form, occasion: e.target.value})}
+                value={formInputs.occasion}
+                onChange={e => setFormInputs({...formInputs, occasion: e.target.value})}
             >
                 <option>None</option>
                 <option>Birthday</option>

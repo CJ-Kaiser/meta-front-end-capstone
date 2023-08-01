@@ -36,6 +36,7 @@ function Testimonials() {
                 <div className="testimonialContainer">
                     {testimonialData.map((data) => (
                         <TestimonialCard
+                            key={data.customer}
                             rating={data.rating}
                             customer={data.customer}
                             imageSrc={data.imageSrc}

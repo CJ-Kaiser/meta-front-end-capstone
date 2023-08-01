@@ -8,6 +8,7 @@ import {useReducer} from 'react';
 function Main() {
 
   function updateTimes(state, action){
+    console.log(action);
     return [
       "17:00",
       "18:00",
@@ -29,13 +30,13 @@ function Main() {
     ];
   }
 
-  const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
+  const [availableTimes, timesDispatch] = useReducer(updateTimes, initializeTimes());
 
   return (
     <main>
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
-        <Route path="/booking" element={<BookingPage times={availableTimes}/>}></Route>
+        <Route path="/booking" element={<BookingPage timesState={[availableTimes, timesDispatch]}/>}></Route>
       </Routes>
     </main>
   );

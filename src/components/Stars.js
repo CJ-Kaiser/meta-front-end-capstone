@@ -6,16 +6,9 @@ function Stars({ rating }) {
     const elements=[];
     for (let i = 1; i <= 5; i++) {
 
-        elements.push(<img src={
+        elements.push(<img key={i} src={
             i > rating ? starEmpty : starFull
         }/>);
-
-        /*
-        if(i > {rating})
-            elements.push(<img src={starEmpty}/>);
-        else
-            elements.push(<img src={starFull}/>);
-            */
     }
     return (
         <div className="stars">
