@@ -4,6 +4,7 @@ import {useState} from 'react';
 function BookingForm({timesState}) {
 
     const [availableTimes, timesDispatch] = timesState;
+    const [submitText, setSubmitText] = useState("Make your reservation");
 
     const [formInputs, setFormInputs] = useState({
         date: Date.now.toString(),
@@ -20,8 +21,13 @@ function BookingForm({timesState}) {
         });
     };
 
+    function handleSubmit(e) {
+        e.preventDefault();
+        setSubmitText("Submitted");
+    }
+
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <label htmlFor="res-date">Choose date</label>
             <input
                 type="date"
@@ -35,7 +41,7 @@ function BookingForm({timesState}) {
                 onChange={e=> setFormInputs({...formInputs, time: e.target.value})}
             >
                 {availableTimes.map(time => (
-                    <option>{time}</option>
+                    <option key={time}>{time}</option>
                 ))}
             </select>
             <label htmlFor="guests">Number of guests</label>
@@ -58,7 +64,7 @@ function BookingForm({timesState}) {
                 <option>Birthday</option>
                 <option>Anniversary</option>
             </select>
-            <input type="submit" value="Make Your reservation"/>
+            <input type="submit" value={submitText}/>
         </form>
     );
 };

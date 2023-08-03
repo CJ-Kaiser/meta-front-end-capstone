@@ -5,30 +5,35 @@ import BookingPage from './BookingPage/BookingPage.js';
 import {Routes, Route} from "react-router-dom";
 import {useReducer} from 'react';
 
+
+export function initializeTimes() {
+  return [
+    "17:00",
+    "18:00",
+    "19:00",
+    "20:00",
+    "21:00",
+    "22:00",
+  ];
+}
+
+export function updateTimes(state, action){
+  console.log(action);
+  console.log(state);
+  return state;
+  /*
+  return [
+    "17:00",
+    "18:00",
+    "19:00",
+    "20:00",
+    "21:00",
+    "22:00",
+  ];
+  */
+}
+
 function Main() {
-
-  function updateTimes(state, action){
-    console.log(action);
-    return [
-      "17:00",
-      "18:00",
-      "19:00",
-      "20:00",
-      "21:00",
-      "22:00",
-    ];
-  }
-
-  function initializeTimes() {
-    return [
-      "17:00",
-      "18:00",
-      "19:00",
-      "20:00",
-      "21:00",
-      "22:00",
-    ];
-  }
 
   const [availableTimes, timesDispatch] = useReducer(updateTimes, initializeTimes());
 
