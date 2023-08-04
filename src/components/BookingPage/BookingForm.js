@@ -1,13 +1,13 @@
 
 import {useState} from 'react';
+import { todayString } from '../../api';
 
 function BookingForm({timesState}) {
-
     const [availableTimes, timesDispatch] = timesState;
     const [submitText, setSubmitText] = useState("Make your reservation");
 
     const [formInputs, setFormInputs] = useState({
-        date: Date.now.toString(),
+        date: todayString(),
         time: '17:00',
         people: 1,
         occasion: "None"
@@ -40,9 +40,12 @@ function BookingForm({timesState}) {
                 value={formInputs.time}
                 onChange={e=> setFormInputs({...formInputs, time: e.target.value})}
             >
-                {availableTimes.map(time => (
-                    <option key={time}>{time}</option>
-                ))}
+                {availableTimes===undefined? <option>Loading</option>
+                    : availableTimes.times.map(time => (
+                        <option key={time}>{time}</option>
+                        )
+                    )
+                }
             </select>
             <label htmlFor="guests">Number of guests</label>
             <input 

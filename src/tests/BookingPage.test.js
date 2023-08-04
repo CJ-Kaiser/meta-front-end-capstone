@@ -15,7 +15,6 @@ test('choose date text exists', ()=> {
 test('Submit button calls function', ()=>{
     const timesData = [["17:00", "18:00"], jest.fn()]
 
-    const onSubmit = jest.fn();
     const {getByText} = render(<BookingForm timesState={timesData}/>);
     const button = getByText("Make your reservation");
     expect(screen.queryByText("Submitted")).toBeNull();
