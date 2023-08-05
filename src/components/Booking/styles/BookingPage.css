@@ -39,15 +39,21 @@ form label {
     border: none;
     border-radius: 8px;
     text-align: center;
+    box-sizing: border-box;
 
     font-size: 16px;
-    cursor: pointer;
-
+    
     transition: 0.2s;
 }
 
-.booking input:hover,
-.booking select:hover {
+.booking input:invalid,
+.booking select:invalid {
+    border: 2px solid red;
+}
+
+.booking input:not([disabled]):hover,
+.booking select:not([disabled]):hover {
+    cursor: pointer;
     background-color: #fff1e3;
     transition: 0.2s;
 }

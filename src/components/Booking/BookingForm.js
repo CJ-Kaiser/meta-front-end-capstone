@@ -12,13 +12,43 @@ function BookingForm({ timesState, submitCallback }) {
         occasion: "None"
     });
 
+    function validateForm(newState) {
+        const dateValid = !isNaN(Date.parse(newState.date));
+        const people = newState.people;
+        const peopleValid = people > 0 && people < 11;
+        
+        const disableButton = !(dateValid && peopleValid);
+        const form = document.getElementById("form");
+        const submitBtn = document.getElementById("submit");
+        if(disableButton){
+            submitBtn.setAttribute("disabled", true);
+            form.reportValidity();
+        } else {
+            submitBtn.removeAttribute("disabled");
+        }
+    }
+    
     function dateChanged(e) {
-        setFormInputs({ ...formInputs, date: e.target.value });
+        const newState = { ...formInputs, date: e.target.value };
+        setFormInputs(newState);
+
         timesDispatch({
             type: 'changed-date',
             date: e.target.value,
         });
+        validateForm(newState);
     };
+
+    function timeChanged(e) {
+        setFormInputs({ ...formInputs, time: e.target.value });
+    }
+
+    function guestsChanged(e) {
+        const newState = { ...formInputs, people: e.target.value };
+        console.log(newState);
+        setFormInputs(newState);
+        validateForm(newState);
+    }
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -27,7 +57,7 @@ function BookingForm({ timesState, submitCallback }) {
 
     return (
         <div className="formBlock">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} id="form">
                 <div className="horizontal">
                     <label htmlFor="res-date" className="sectionCategory">Choose date</label>
                     <input
@@ -48,7 +78,7 @@ function BookingForm({ timesState, submitCallback }) {
                         name="time"
                         value={formInputs.time}
                         required
-                        onChange={e => setFormInputs({ ...formInputs, time: e.target.value })}
+                        onChange={e => timeChanged(e)}
                     >
                         {availableTimes === undefined ? <option>Loading</option>
                             : availableTimes.times.map(time => (
@@ -70,7 +100,7 @@ function BookingForm({ timesState, submitCallback }) {
                         id="guests"
                         required
                         value={formInputs.people}
-                        onChange={e => setFormInputs({ ...formInputs, people: e.target.value })}
+                        onChange={e => guestsChanged(e)}
                     />
                 </div>
                 <div className="horizontal">
@@ -89,7 +119,7 @@ function BookingForm({ timesState, submitCallback }) {
                     </select>
                 </div>
                 <div>
-                    <input type="submit" className="btn" value={"Make your reservation"} />
+                    <input type="submit" id="submit" className="btn" value={"Make your reservation"} />
                 </div>
             </form>
         </div>
