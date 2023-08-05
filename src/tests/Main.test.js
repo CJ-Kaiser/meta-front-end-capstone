@@ -1,29 +1,34 @@
 import { render, screen } from '@testing-library/react';
 import Main from '../components/Main.js';
-import { initializeTimes, updateTimes } from '../components/Main.js';
+import { initializeTimesData, updateTimes, fetchTimes } from '../components/Main.js';
+import { todayString } from '../api.js';
 
-test('initializeTimes returns expected values', () => {
-    expect(initializeTimes()).toEqual([
-        "17:00",
-        "18:00",
-        "19:00",
-        "20:00",
-        "21:00",
-        "22:00",
-      ]);
-    
+test('initializeTimes times is array with content', () => {
+    const data = initializeTimesData();
+
+    expect(Array.isArray(data.times)).toBeTruthy();
+    expect(data.times.length).toBeGreaterThan(0);
 })
 
-test('updateTimes returns given state', ()=> {
-    let state = [
-        "1:00",
-        "2:00",
-        "3:00",
-    ]
+test('updateTimes returns given times with type:fetch-times-success', ()=> {
 
-    expect(updateTimes(state, {type: 'changed-date'})).toEqual([
-        "1:00",
-        "2:00",
-        "3:00",
-    ])
+    let state = initializeTimesData();
+
+    const dispatchMock = (action) => {
+        state = updateTimes(state, action);
+    };
+
+    dispatchMock({
+        type:"fetch-times-success",
+        times: ["2:00", "2:30", "4:00"]
+    });
+
+    expect(state.times).toEqual(["2:00", "2:30", "4:00"]);
+
+    dispatchMock({
+        type:"bad-tag",
+        times: ["1:00", "5:30"]
+    });
+
+    expect(state.times).toEqual(["2:00", "2:30", "4:00"]);
 })

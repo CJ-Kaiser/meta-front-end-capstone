@@ -7,6 +7,43 @@ import { useReducer, useEffect } from 'react';
 import { fetchAPI, submitAPI, todayString } from '../api';
 import ConfirmedBooking from './Booking/ConfirmedBooking';
 
+export function initializeTimesData() {
+  return {
+    date: todayString(),
+    times: [
+      "0:00",
+    ]
+  };
+}
+
+export function updateTimes(state, action) {
+  switch (action.type) {
+    case 'changed-date':
+      return {
+        ...state,
+        date: action.date,
+      }
+    case 'fetch-times-success':
+      return {
+        ...state,
+        times: action.times,
+      }
+    default:
+      return {...state}
+  }
+}
+
+export function fetchTimes(timesState, timesDispatch) {
+  fetchAPI(new Date(timesState.date))
+    .then(response => JSON.parse(response))
+    .then(availableTimes =>
+      timesDispatch({
+        type: 'fetch-times-success',
+        times: availableTimes,
+      })
+    );
+}
+
 function Main() {
 
   const [timesState, timesDispatch] = useReducer(updateTimes, initializeTimesData());
@@ -14,40 +51,9 @@ function Main() {
 
   useEffect(() => {
     if (timesState.date) {
-      fetchAPI(new Date(timesState.date))
-        .then(response => JSON.parse(response))
-        .then(availableTimes =>
-          timesDispatch({
-            type: 'fetch-times-success',
-            times: availableTimes,
-          })
-        );
+      fetchTimes(timesState, timesDispatch);
     }
   }, [timesState.date]);
-
-  function initializeTimesData() {
-    return {
-      date: todayString(),
-      times: [
-        "0:00",
-      ]
-    };
-  }
-
-  function updateTimes(state, action) {
-    switch (action.type) {
-      case 'changed-date':
-        return {
-          ...state,
-          date: action.date,
-        }
-      case 'fetch-times-success':
-        return {
-          ...state,
-          times: action.times,
-        }
-    }
-  }
 
   function submitForm(formData) {
     console.log(formData);

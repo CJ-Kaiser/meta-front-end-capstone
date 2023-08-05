@@ -45,7 +45,7 @@ form label {
 
 .booking input:hover,
 .booking select:hover {
-    background-color: #F4CE14;
+    background-color: #fff1e3;
     transition: 0.2s;
 }
 

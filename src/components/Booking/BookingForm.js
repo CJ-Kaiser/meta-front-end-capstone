@@ -4,7 +4,6 @@ import { todayString } from '../../api';
 
 function BookingForm({ timesState, submitCallback }) {
     const [availableTimes, timesDispatch] = timesState;
-    const [submitText, setSubmitText] = useState("Make your reservation");
 
     const [formInputs, setFormInputs] = useState({
         date: todayString(),
@@ -23,8 +22,6 @@ function BookingForm({ timesState, submitCallback }) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(e.target);
-        setSubmitText("Submitted");
         submitCallback(e.target);
     }
 
@@ -86,7 +83,7 @@ function BookingForm({ timesState, submitCallback }) {
                     </select>
                 </div>
                 <div>
-                    <input type="submit" className="btn" value={submitText} />
+                    <input type="submit" className="btn" value={"Make your reservation"} />
                 </div>
             </form>
         </div>

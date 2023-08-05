@@ -1,11 +1,16 @@
 
 import { fireEvent, render, screen } from '@testing-library/react';
-import BookingPage from '../components/BookingPage/BookingPage.js';
-import BookingForm from '../components/BookingPage/BookingForm.js';
+import BookingPage from '../components/Booking/BookingPage.js';
+import BookingForm from '../components/Booking/BookingForm.js';
+import { todayString } from '../api.js';
 
-test('choose date text exists', ()=> {
+test('Choose date text exists', ()=> {
 
-    let timesData = [["17:00", "18:00"], jest.fn()]
+    const timesData = [{
+        date: todayString(),
+        times: ["17:00", "18:00"],
+    },
+    jest.fn()]
 
     render(<BookingForm timesState={timesData}/>);
     let label = screen.getByText("Choose date");
@@ -13,12 +18,18 @@ test('choose date text exists', ()=> {
 })
 
 test('Submit button calls function', ()=>{
-    const timesData = [["17:00", "18:00"], jest.fn()]
+    const timesData = [{
+        date: todayString(),
+        times: ["17:00", "18:00"],
+    },
+    jest.fn()]
 
-    const {getByText} = render(<BookingForm timesState={timesData}/>);
+    const mockCallback = jest.fn();
+
+    const {getByText} = render(<BookingForm timesState={timesData} submitCallback={mockCallback}/>);
     const button = getByText("Make your reservation");
-    expect(screen.queryByText("Submitted")).toBeNull();
+    expect(mockCallback).not.toHaveBeenCalled();
     fireEvent.click(button);
-    expect(getByText("Submitted")).toBeInTheDocument();
+    expect(mockCallback).toHaveBeenCalled();
 })
 
