@@ -31,7 +31,7 @@ function Highlights() {
         <section className="highlights middle8columns">
             <div className="highlightsHeader">
                 <h1 className="displayTitle">This Week's Specials!</h1>
-                <button>Order Online</button>
+                <button class="btn">Order Online</button>
             </div>
             <div className="cardHolder">
                 {cardData.map((data) => (

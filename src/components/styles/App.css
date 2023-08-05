@@ -30,27 +30,27 @@ h1.cardTitle {
   font-weight: bold;
 }
 
-p, span, h1.cardTitle, button {
+p, span, h1.cardTitle, .btn {
   font-family: 'Karla', sans-serif;
 }
 
-p.sectionCategory {
+.sectionCategory {
   font-size: 16px;
   font-weight:800;
 }
 
-p.leadText {
+.leadText {
   font-size: 18px;
   font-weight: 500;
 }
 
-p.paragraphText {
+.paragraphText {
   font-size: 16px;
   font-weight: 400;
   color: #495E57;
 }
 
-p.highlightText {
+.highlightText {
   font-size: 16px;
   font-weight: 500;
   color: #495E57;
@@ -67,14 +67,34 @@ p.highlightText {
   min-width: 120px;
 }
 
-button {
+.btn {
   background-color: #F4CE14;
   font-size: 18px;
   font-weight: bold;
   border: none;
   border-radius: 16px;
+  box-shadow: none;
   width:200px;
   height:60px;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  box-shadow: 0 1px 4px darkslategray;
+background-color: #ffdd32;
+
+  transform: scale(1.03);
+  transition-duration: 0.1s;
+}
+
+.btn:active {
+  box-shadow: 0 1px 4px inset slategray;
+  background-color: #dbbc1e;
+
+  transform: scale(0.98);
+  transition-duration: 0.1s;
 }
 
 .navList ul {

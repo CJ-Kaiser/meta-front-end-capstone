@@ -1,0 +1,9 @@
+.confirmedBooking {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #6F6E6E;
+    min-height: 300px;
+}
+
