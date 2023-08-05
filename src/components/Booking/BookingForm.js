@@ -35,15 +35,19 @@ function BookingForm({ timesState, submitCallback }) {
                         type="date"
                         name="date"
                         id="res-date"
+                        required
                         value={formInputs.date}
                         onChange={e => dateChanged(e)}
                     />
                 </div>
                 <div className="horizontal">
                     <label htmlFor="res-time" className="sectionCategory">Choose time</label>
-                    <select id="res-time "
+                    <select
+                        className="paragraphText"
+                        id="res-time "
                         name="time"
                         value={formInputs.time}
+                        required
                         onChange={e => setFormInputs({ ...formInputs, time: e.target.value })}
                     >
                         {availableTimes === undefined ? <option>Loading</option>
@@ -64,6 +68,7 @@ function BookingForm({ timesState, submitCallback }) {
                         min="1"
                         max="10"
                         id="guests"
+                        required
                         value={formInputs.people}
                         onChange={e => setFormInputs({ ...formInputs, people: e.target.value })}
                     />
@@ -74,6 +79,7 @@ function BookingForm({ timesState, submitCallback }) {
                         className="paragraphText"
                         name="occasion"
                         id="occasion"
+                        required
                         value={formInputs.occasion}
                         onChange={e => setFormInputs({ ...formInputs, occasion: e.target.value })}
                     >
