@@ -74,7 +74,7 @@ function BookingForm({ timesState, submitCallback }) {
                     <label htmlFor="res-time" className="sectionCategory">Choose time</label>
                     <select
                         className="paragraphText"
-                        id="res-time "
+                        id="res-time"
                         name="time"
                         value={formInputs.time}
                         required
@@ -89,26 +89,26 @@ function BookingForm({ timesState, submitCallback }) {
                     </select>
                 </div>
                 <div className="horizontal">
-                    <label htmlFor="guests" className="sectionCategory">Number of guests</label>
+                    <label htmlFor="res-guests" className="sectionCategory">Number of guests</label>
                     <input
                         className="paragraphText"
                         type="number"
-                        name="guestNumber"
+                        name="guests"
                         placeholder="1"
                         min="1"
                         max="10"
-                        id="guests"
+                        id="res-guests"
                         required
                         value={formInputs.people}
                         onChange={e => guestsChanged(e)}
                     />
                 </div>
                 <div className="horizontal">
-                    <label htmlFor="occasion" className="sectionCategory">Occasion</label>
+                    <label htmlFor="res-occasion" className="sectionCategory">Occasion</label>
                     <select
                         className="paragraphText"
                         name="occasion"
-                        id="occasion"
+                        id="res-occasion"
                         required
                         value={formInputs.occasion}
                         onChange={e => setFormInputs({ ...formInputs, occasion: e.target.value })}
