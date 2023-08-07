@@ -112,6 +112,10 @@ p, span, h1.cardTitle, .btn {
   color: black;
 }
 
+.navList a:hover {
+  text-decoration: underline black 2px;
+}
+
 @media not (max-width: 840px) {
   .app {
     grid-template-rows: repeat(3, auto);

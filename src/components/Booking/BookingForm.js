@@ -119,7 +119,7 @@ function BookingForm({ timesState, submitCallback }) {
                     </select>
                 </div>
                 <div>
-                    <input type="submit" id="submit" className="btn" value={"Make your reservation"} />
+                    <input type="submit" id="submit" className="btn" value={"Make your reservation"} aria-label="On Click"/>
                 </div>
             </form>
         </div>

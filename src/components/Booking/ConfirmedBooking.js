@@ -3,10 +3,10 @@ import './styles/ConfirmedBooking.css';
 
 function ConfirmedBooking() {
     return (
-        <div className="confirmedBooking">
+        <section className="confirmedBooking">
             <h1 className="displayTitle">Booking Confirmed</h1>
             <Link to="/"><button class="btn">Back</button></Link>
-        </div>
+        </section>
     );
 }
 
