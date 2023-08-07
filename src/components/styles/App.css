@@ -68,16 +68,25 @@ p, span, h1.cardTitle, .btn {
 }
 
 .btn {
-  background-color: #F4CE14;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width:200px;
+  height:60px;
+
   font-size: 18px;
   font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+
   border: none;
   border-radius: 16px;
   box-shadow: none;
-  width:200px;
-  height:60px;
   cursor: default;
-  
+  background-color: #F4CE14;
+
   transition: 0.2s;
 }
 

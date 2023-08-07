@@ -4,6 +4,7 @@ import bruschetta from '../../images/bruschetta.png';
 import greekSalad from '../../images/greekSalad.jpg';
 import lemonDessert from '../../images/lemonDessert.jpg';
 import FoodCard from './FoodCard.js';
+import { Link } from 'react-router-dom';
 
 const cardData = [
     {
@@ -31,7 +32,7 @@ function Highlights() {
         <section className="highlights middle8columns">
             <div className="highlightsHeader">
                 <h1 className="displayTitle">This Week's Specials!</h1>
-                <button class="btn">Order Online</button>
+                <Link to="/" className="btn">Order Online</Link>
             </div>
             <div className="cardHolder">
                 {cardData.map((data) => (
