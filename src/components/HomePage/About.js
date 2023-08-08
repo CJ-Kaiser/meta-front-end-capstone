@@ -4,7 +4,7 @@ import oneChef from '../../images/chefB.jpg';
 
 function About() {
     return (
-        <section className='about middle8columns'>
+        <section className='about middle8columns homepageMaxWidth'>
             <div className='aboutLeft'>
                 <h1 className='displayTitle'>
                     Little Lemon

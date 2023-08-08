@@ -114,6 +114,7 @@ p, span, h1.cardTitle, .btn {
 
 .navList li {
   display:inline-block;
+  flex-shrink: 0;
 }
 
 .navList a {
@@ -125,6 +126,18 @@ p, span, h1.cardTitle, .btn {
   text-decoration: underline black 2px;
 }
 
+.homepageMaxWidth {
+  width:80%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+/*
 @media not (max-width: 840px) {
   .app {
     grid-template-rows: repeat(3, auto);
@@ -151,3 +164,4 @@ p, span, h1.cardTitle, .btn {
     grid-template-columns: auto;
   }
 }
+*/

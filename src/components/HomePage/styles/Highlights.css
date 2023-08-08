@@ -1,7 +1,6 @@
 .highlights {
     margin-top: 20px;
     margin-bottom: 20px;
-    grid-row: 2/span 1;
 }
 
 .cardHolder {
@@ -9,9 +8,6 @@
     display:flex;
     justify-content: space-between;
     column-gap: 20px;
-    
-    width: 100%;
-    max-width: 1000px;
 }
 
 .highlightsHeader {

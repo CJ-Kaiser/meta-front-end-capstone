@@ -1,8 +1,5 @@
 
 .hero {
-    grid-column: 1/span 12;
-    grid-row: 1/span 1;
-
     height: 465px;
     color: #FFFFFF;
 }
@@ -12,43 +9,48 @@
     height: 405px;
     width:100%;
     position:absolute;
-    z-index: -1;
+    z-index: -2;
+}
+
+.heroInfoBackdrop {
+    padding: 12px;
+    margin-top: -16px;
+    border-radius: 8px;
 }
 
 .hero .displayTitle {
     color: #F4CE14;
-    margin-top: 30px;
-    width: 290px;
+    width: 280px;
+    margin-top: -16px;
+    white-space: nowrap;
 }
 
 .hero .subtitle {
     margin-top:-16px;
-    margin-bottom:12px;
+    width: 270px;
 }
 
-p.heroText {
+.heroText {
     font-size: 20px;
     font-weight: 500;
     width: 270px;
     line-height: 140%;
+    padding-top: 16px;
 }
 
 .heroInner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 44px;
 }
 
 .heroInfo{
-    grid-column: 1/span 1;
-    grid-row: 1/span 1;
+    flex-grow: 1.5;
 }
 
 .heroImgContainer {
-    grid-column: 2/span 1;
-    grid-row: 1/span 1;
+    flex-grow: 1;
     display: flex;
-    justify-content: flex-end;
     flex-direction: column;
 }
 
@@ -57,4 +59,21 @@ p.heroText {
     height: 400px;
     object-fit: cover;
     border-radius: 16px;
+}
+
+@media (max-width: 840px) {
+    .heroImgContainer {
+        position: absolute;
+        z-index: -1;
+        margin-top: -30px;
+    }
+
+    .heroInfo {
+        flex-grow: unset;
+    }
+
+    .heroInfoBackdrop {
+        background-color: #000000bb;
+        text-shadow: 1px 1px 2px black;
+    }
 }

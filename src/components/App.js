@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="app lg-grid12col sm-grid1col">
       <Header />
-      <HeaderNav />
       <Main />
       <Footer />
     </div>
