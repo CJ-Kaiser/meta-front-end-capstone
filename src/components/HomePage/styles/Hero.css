@@ -65,15 +65,19 @@
     .heroImgContainer {
         position: absolute;
         z-index: -1;
-        margin-top: -30px;
+        margin-top: -20px;
     }
 
     .heroInfo {
         flex-grow: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .heroInfoBackdrop {
         background-color: #000000bb;
         text-shadow: 1px 1px 2px black;
+        margin-top: 0;
     }
 }

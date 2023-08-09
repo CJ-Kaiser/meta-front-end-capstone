@@ -23,25 +23,27 @@ const socialLinks = [
 
 function Footer() {
     return(
-        <footer className="lg-grid12col">
-            <div className="ft-logo imgContainer">
-                <img src={logo2} className="logoImg"/>
-            </div>
-            <div className="ft-doormat">
-                <h1 className="cardTitle">Doormat Navigation</h1>
-                <Nav links={siteLinks}/>
-            </div>
-            <div className="ft-contact">
-                <h1 className="cardTitle">Contact</h1>
-                <ul className='navList'>
-                    <li>Address</li>
-                    <li>Phone Number</li>
-                    <li>Email</li>
-                </ul>
-            </div>
-            <div className="ft-social">
-                <h1 className="cardTitle">Social Media Links</h1>
-                <Nav links={socialLinks}/>
+        <footer>
+            <div className=" ft-inner homepageMaxWidth">
+                <div className="ft-logo imgContainer">
+                    <img src={logo2} className="logoImg"/>
+                </div>
+                <div className="ft-doormat">
+                    <h1 className="cardTitle">Doormat Navigation</h1>
+                    <Nav links={siteLinks}/>
+                </div>
+                <div className="ft-contact">
+                    <h1 className="cardTitle">Contact</h1>
+                    <ul className='navList'>
+                        <li>Address</li>
+                        <li>Phone Number</li>
+                        <li>Email</li>
+                    </ul>
+                </div>
+                <div className="ft-social">
+                    <h1 className="cardTitle">Social Media Links</h1>
+                    <Nav links={socialLinks}/>
+                </div>
             </div>
         </footer>
     );

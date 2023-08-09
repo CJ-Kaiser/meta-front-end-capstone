@@ -6,7 +6,7 @@ import Main from './Main.js';
 
 function App() {
   return (
-    <div className="app lg-grid12col sm-grid1col">
+    <div className="app">
       <Header />
       <Main />
       <Footer />

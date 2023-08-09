@@ -120,10 +120,14 @@ p, span, h1.cardTitle, .btn {
 .navList a {
   text-decoration: none;
   color: black;
+  transition: 0.2s;
+  border-bottom: 2px solid transparent;
+  border-radius: 4px;
 }
 
 .navList a:hover {
-  text-decoration: underline black 2px;
+  border-bottom: 2px solid black;
+  transition: 0.1s;
 }
 
 .homepageMaxWidth {
@@ -136,32 +140,3 @@ p, span, h1.cardTitle, .btn {
   display: flex;
   flex-direction: column;
 }
-
-/*
-@media not (max-width: 840px) {
-  .app {
-    grid-template-rows: repeat(3, auto);
-  }
-
-  .lg-grid12col {
-    display: grid;
-    grid-template-columns: repeat(2, 0.5fr) repeat(8, 1fr) repeat(2,0.5fr);
-    column-gap: 20px;
-  }
-
-  .middle8columns {
-    grid-column: 3/span 8;
-}
-}
-
-@media (max-width: 840px) {
-  .app {
-    grid-template-rows: repeat(4, auto);
-  }
-
-  .sm-grid1col {
-    display: grid;
-    grid-template-columns: auto;
-  }
-}
-*/

@@ -30,8 +30,8 @@ const testimonialData = [
 
 function Testimonials() {
     return (
-        <section className="testimonials lg-grid12col">
-            <div className="middle8columns homepageMaxWidth">
+        <section className="testimonials">
+            <div className="homepageMaxWidth">
                 <h1 className="displayTitle">Testimonials</h1>
                 <div className="testimonialContainer">
                     {testimonialData.map((data) => (

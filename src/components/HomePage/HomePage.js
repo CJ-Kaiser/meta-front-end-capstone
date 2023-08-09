@@ -6,7 +6,7 @@ import About from './About';
 
 function HomePage() {
     return(
-        <div className='home lg-grid12col sm-grid1col'>
+        <div className='home'>
             <Hero/>
             <Highlights/>
             <Testimonials/>

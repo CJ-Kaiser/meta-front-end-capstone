@@ -1,9 +1,18 @@
 
+.ft-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
 footer .navList {
     display: flex;
     flex-direction: column;
     font-size: 20px;
     font-weight: 500;
+
+    padding-top: 8px;
+    border-top: 2px solid #6F6E6E;
+    border-radius: 4px;
 }
 
 footer {
@@ -12,61 +21,17 @@ footer {
 }
 
 footer .cardTitle {
-    margin-bottom: 16px;
-}
-
-@media not (max-width: 840px) {
-    footer {
-        grid-column: 1 / span 12;
-        grid-row: 3/span 1;
-
-        grid-template-rows: auto;
-
-        height: auto;
-    }
-
-    .ft-logo {
-        grid-column: 3/span 2;
-    }
-
-    .ft-doormat {
-        grid-column: 5/span 2;
-    }
-
-    .ft-contact {
-        grid-column: 7/span 2;
-    }
-
-    .ft-social {
-        grid-column: 9/span 2;
-    }
+    margin-bottom: 4px;
 }
 
 @media (max-width: 840px) {
-    footer {
-        grid-row: 4/span 1;
-
-        grid-template-rows: repeat(4, auto);
-        grid-template-columns: auto;
+    .ft-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
     }
 
     .ft-logo {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .ft-doormat {
-        grid-column: 1;
-        grid-row:2
-    }
-
-    .ft-contact {
-        grid-column: 1;
-        grid-row:3
-    }
-
-    .ft-social {
-        grid-column: 1;
-        grid-row:4
+        width: 100%;
     }
 }

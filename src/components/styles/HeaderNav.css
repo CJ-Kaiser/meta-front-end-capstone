@@ -12,3 +12,9 @@
     justify-content: flex-end;
     gap: min(4%, 28px);
 }
+
+@media (max-width: 840px) {
+    .headerNav ul {
+        justify-content: center;
+    }
+}

@@ -7,10 +7,8 @@ header {
 @media not (max-width: 840px) {
   header {
     flex-direction: row;
-    grid-column: 3/span 8;
-    grid-row: 1/span 1;
   }
-  
+
   header img {
     max-width: 180px;
   }
@@ -19,7 +17,5 @@ header {
 @media (max-width: 840px) {
   header {
     flex-direction: column;
-    grid-column: 1/span 1;
-    grid-row: 1/span 1;
   }
 }

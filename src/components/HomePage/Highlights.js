@@ -29,7 +29,7 @@ const cardData = [
 
 function Highlights() {
     return (
-        <section className="highlights middle8columns homepageMaxWidth">
+        <section className="highlights homepageMaxWidth">
             <div className="highlightsHeader">
                 <h1 className="displayTitle">This Week's Specials!</h1>
                 <Link to="/" className="btn">Order Online</Link>

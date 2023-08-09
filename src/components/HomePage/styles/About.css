@@ -1,13 +1,9 @@
 .about {
-    grid-row: 4/span 1;
-
     height: 470px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
 }
 
 .about .displayTitle {
-    /*color: #F4CE14;*/
     margin-top: 30px;
     width: 290px;
 }
@@ -24,11 +20,11 @@
 }
 
 .aboutLeft {
-    columns: 1/1;
+    flex-grow: 0.5;
 }
 
 .aboutRight {
-    columns: 2/1;
+    flex-grow: 3;
     position: relative;
 }
 
@@ -51,4 +47,36 @@
     top: 5%;
     left: 40%;
     object-position: 70% 50%;
+}
+
+@media (max-width: 840px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        justify-items: flex-start;
+        height: 800px;
+        gap: 20px;
+    }
+
+    .aboutLeft {
+        flex-grow: 0;
+    }
+
+    .aboutRight {
+        width: 100%;
+        min-width: 490px;
+    }
+
+    .about .displayTitle {
+        margin-top: 0;
+    }
+
+    .oneChef {
+        left: 5%;
+    }
+
+    .twoChefs {
+        left: unset;
+        right: 5%;
+    }
 }
